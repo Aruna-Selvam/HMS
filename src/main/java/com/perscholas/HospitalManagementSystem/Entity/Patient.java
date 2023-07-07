@@ -33,4 +33,11 @@ public class Patient {
 
     public Patient(String john_smith, String s, String s1, LocalDate of) {
     }
+
+
+    public Patient(long l, String alice_johnson, LocalDate of, String female, String s, String s1, String s2) {
+    }
+
+    public Patient(String jane_doe, LocalDate of, String female, String s, String s1, String s2) {
+    }
 }
