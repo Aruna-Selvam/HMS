@@ -1,0 +1,5 @@
+com\perscholas\HospitalManagementSystem\Entity\ScheduleAppointment.class
+com\perscholas\HospitalManagementSystem\HospitalManagementSystemApplication.class
+com\perscholas\HospitalManagementSystem\Repository\ScheduleAppointmentRepository.class
+com\perscholas\HospitalManagementSystem\Controller\homeController.class
+com\perscholas\HospitalManagementSystem\Controller\ScheduleAppointmentController.class

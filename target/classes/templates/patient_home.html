@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" th:href="@{/CSS/patient_home.css}" >
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<section id="header">
+    <nav class="nav fixed-top">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <img src="../Images/logo hos.jpg" width="100" height="50">
+        <p><h5 id="yash" style="color:blue;">Yash Group of Hospitals</h5></p>
+        <ul class="nav-links" id="navbar">
+            <i class="uil uil-times navCloseBtn"></i>
+
+            <a href="#" th:href="@{/}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
+
+            <a href="#" th:href="@{/service}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Service</a>
+            <a href="#" th:href="@{/app}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Schedule Appointment</a>
+            <a href="#" th:href="@{/about}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">About Us</a>
+            <a href="#" th:href="@{/patient}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Patient </a>
+            <a href="#" th:href="@{/login}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+        </ul>
+
+
+    </nav>
+</section>
+
+<section id="feature" class="section-p1">
+
+
+  <div class="fe-box" width="50%">
+<!--    <h4 class="card-title">Patient</h4>-->
+    <h1 class="card-text">Add New Patient Information</h1>
+    <a href="#" th:href="@{/patient/form}" class="card-link btn btn-primary">Add </a>
+    <!--        <button class="normal">Manage</button>-->
+  </div>
+  <div class="fe-box" width="50%">
+<!--    <h1 class="card-title">Products</h1>-->
+    <h1 class="card-text">Update Patient By ID</h1>
+    <a href="#" th:href="@{/patient/edit/update_by_id}" class="card-link btn btn-primary">Update</a>
+    <!--        <button class="normal">Manage</button>-->
+  </div>
+  <div class="fe-box" width="50%">
+<!--    <h4 class="card-title">Categories</h4>-->
+    <h1 class="card-text">View Patients Information</h1>
+    <a href="#" th:href="@{/patient/view}" class="card-link btn btn-primary">View</a>
+    <!--        <button class="normal">Manage</button>-->
+  </div>
+
+
+</section>
+<section  id="feature1" class="sec">
+  <div class="f-box" width="30%">
+    <!--    <h4 class="card-title">Categories</h4>-->
+    <h1 class="card-text">Delete Patient By ID</h1>
+    <a href="#" th:href="@{/admin/categories}" class="card-link btn btn-primary">Delete</a>
+    <!--        <button class="normal">Manage</button>-->
+  </div>
+    <div class="f-box" width="30%">
+        <!--    <h4 class="card-title">Categories</h4>-->
+        <h1 class="card-text">View Patient By ID</h1>
+        <a href="#" th:href="@{patient/patientById}" class="card-link btn btn-primary">View</a>
+        <!--        <button class="normal">Manage</button>-->
+    </div>
+</section>
+</body>
+</html>

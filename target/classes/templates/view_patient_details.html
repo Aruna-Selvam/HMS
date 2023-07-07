@@ -1,0 +1,71 @@
+<!-- patients.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Patients</title>
+  <link rel="stylesheet" th:href="@{/CSS/view_patient.css}" >
+
+  <!-- Add your CSS styling here -->
+  <script async>
+function confirmDelete(patientId) {
+event.preventDefault();
+            if (confirm("Are you sure you want to delete this patient?")) {
+                window.location.href = "/patient/delete/" + patientId;
+            }
+        }
+    function goBack() {
+        window.history.back();
+    }
+</script>
+</head>
+<body>
+<h1>Patients</h1>
+<!--<form action="#" th:action="@{/patient/{id}(id=${patient.patientId})}" th:object="${patient}"method="post">-->
+<!--<label for="patientId">Patient ID:</label>-->
+<!--<input type="text" id="patientId" name="patientId">-->
+<!--<button type="submit" >View</button>-->
+<!--<a th:href="@{/patient/{id}(id=${patient.patientId})}">GetPatientByID</a>-->
+<!--</form>-->
+
+<table>
+  <thead>
+  <tr>
+    <th>Patient ID</th>
+    <th>Name</th>
+    <th>Date of Birth</th>
+    <th>Gender</th>
+    <th>Email</th>
+    <th>Contact Number</th>
+    <th>Address</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <form  action="#" th:action="@{/patient/search}" method="get">
+    <input type="text" id="searchText" name="searchText">
+    <button type="submit">Search</button>
+  </form>
+
+  <tr th:each="patient : ${patients}">
+    <td th:text="${patient.patientId}">1</td>
+    <td th:text="${patient.name}">John Doe</td>
+    <td th:text="${patient.dateOfBirth}">1990-01-01</td>
+    <td th:text="${patient.gender}">Male</td>
+    <td th:text="${patient.email}">john@example.com</td>
+    <td th:text="${patient.contactNumber}">1234567890</td>
+    <td th:text="${patient.address}">123 Street, City</td>
+    <td>
+<!--      <a th:href="/patients/{id}/file" class="btn btn-primary">Download File</a>-->
+      <a th:href="@{/patient/edit/{id}(id=${patient.patientId})}">Edit</a>
+      <a th:href="@{/patient/delete/{id}(id=${patient.patientId})}"  onclick="confirmDelete(event, [[${patient.patientId}]])">Delete</a>
+      <a th:href="@{/patient/file/{id}(id=${patient.patientId})}">Download Report</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<a th:href="@{/patient/form}" class="btn btn-primary">Add Patient</a>
+<button  class="btn btn-primary" role="button" onclick="goBack()">Go Back</button>
+
+</body>
+</html>
