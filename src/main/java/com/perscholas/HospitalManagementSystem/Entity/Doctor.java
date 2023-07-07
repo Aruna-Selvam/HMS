@@ -1,12 +1,14 @@
 package com.perscholas.HospitalManagementSystem.Entity;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Data
 @Entity
+@NoArgsConstructor
 public class Doctor {
 
     @Id
@@ -21,4 +23,7 @@ public class Doctor {
     private Department department;
     @OneToMany(mappedBy = "doctor")
     private List<ScheduleAppointment> appointments;
+
+    public Doctor(String s, String cardiology) {
+    }
 }
