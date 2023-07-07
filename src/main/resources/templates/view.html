@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:if="${patient != null}" th:object="${patient}" method="get">
+  <h2>Patient Details</h2>
+  <p><strong>Patient ID:</strong> <span th:text="${patient.patientId}"></span></p>
+  <p><strong>Name:</strong> <span th:text="${patient.name}"></span></p>
+  <p><strong>Date of Birth:</strong> <span th:text="${patient.dateOfBirth}"></span></p>
+  <p><strong>Gender:</strong> <span th:text="${patient.gender}"></span></p>
+  <p><strong>Email:</strong> <span th:text="${patient.email}"></span></p>
+  <p><strong>Contact Number:</strong> <span th:text="${patient.contactNumber}"></span></p>
+  <p><strong>Address:</strong> <span th:text="${patient.address}"></span></p>
+</div>
+</body>
+</html>

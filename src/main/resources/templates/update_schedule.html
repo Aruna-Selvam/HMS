@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="form-container">
+  <!-- Schedule Appointment Form -->
+  <div id="scheduleAppointmentForm" class="form-wrapper">
+    <!--      <h1>Schedule Appointment</h1>-->
+    <!-- Form content -->
+    <div class="formbold-main-wrapper">
+      <!-- Author: FormBold Team -->
+      <!-- Learn More: https://formbold.com -->
+
+      <div class="formbold-form-wrapper">
+        <form action ="#" th:action="@{/schedule/update}"  th:object="${scheduleAppointment}" method="POST">
+          <h1> Schedule Appointment</h1>
+          <div class="formbold-mb-5">
+            <label for="name"   class="formbold-form-label">  Full Name </label>
+            <input type="text" th:field="*{patientName}" name="name" id="name" placeholder="Full Name" class="formbold-form-input"/>
+          </div>
+          <div class="formbold-mb-5">
+            <label for="phone"  class="formbold-form-label"> Phone Number </label>
+            <input type="text" th:field="*{patientPhoneNumber}" name="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input" />
+          </div>
+          <div class="formbold-mb-5">
+            <label for="email" class="formbold-form-label"> Email Address </label>
+            <input type="email" th:field="*{eMail}"  name="email" id="email" placeholder="Enter your email" class="formbold-form-input"/>
+          </div>
+          <div class="flex flex-wrap formbold--mx-3">
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5 w-full">
+                <label for="dateOfBirth"  class="formbold-form-label"> Date Of Birth</label>
+                <input type="date" th:field="*{dateOfBirth}"name="date" id="dateOfBirth" class="formbold-form-input" />
+              </div>
+              <div class="formbold-mb-5 w-full">
+                <!--          <label for="docName"  class="formbold-form-label"> Doctor Name</label>-->
+                <!--          <input type="text" th:field="*{doctorName}" name="doName" id="docName" class="formbold-form-input" />-->
+                <label for="doctor" class="formbold-form-label">Select Doctor:</label>
+                <select id="doctor" name="doctor"  th:field="*{doctorName}" class="large-select">
+                  <option th:each="doctor : ${doctors}"  th:value="${doctor.doctorName}" th:text="${doctor.doctorName}"></option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap formbold--mx-3">
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5 w-full">
+                <label for="date"  class="formbold-form-label"> Date </label>
+                <input type="date" th:field="*{appointmentDate}" name="date1" id="date" class="formbold-form-input" />
+              </div>
+            </div>
+            <div class="w-full sm:w-half formbold-px-3">
+              <div class="formbold-mb-5">
+                <label for="time" class="formbold-form-label"> Time </label>
+                <input type="time" th:field="*{appointmentTime}" name="time1" id="time" class="formbold-form-input"/>
+              </div>
+            </div>
+            <div>
+              <button class="formbold-btn" >Book Appointment</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

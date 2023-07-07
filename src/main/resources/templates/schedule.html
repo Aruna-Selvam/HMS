@@ -1,0 +1,163 @@
+  <!DOCTYPE html>
+  <html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <!-- head content -->
+
+    <link rel="stylesheet" th:href="@{/CSS/schedule.css}" >
+    <!--  <link rel="stylesheet" th:href="@{/CSS/home.css}" >-->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+  <section id="header">
+    <nav class="nav fixed-top">
+      <i class="uil uil-bars navOpenBtn"></i>
+      <!--    <img src="../Images/logo hos.jpg" width="100" height="50">-->
+      <p><h5 id="yash" style="color:blue;">Yash Group of Hospitals</h5></p>
+      <ul class="nav-links" id="navbar">
+        <i class="uil uil-times navCloseBtn"></i>
+
+        <a th:href="@{/}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
+
+        <a th:href="@{/service}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Service</a>
+        <a th:href="@{/schedule}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Schedule Appointment</a>
+        <a th:href="@{/about}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">About Us</a>
+        <a th:href="@{/patient}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Patient </a>
+        <a th:href="@{/login}" class=" btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+      </ul>
+
+
+    </nav>
+  </section>
+  <div class="sec">
+
+    <!-- Buttons aligned on the left side -->
+    <div class="button-container">
+
+      <button id="scheduleAppointmentBtn" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Schedule Appointment</button>
+      <button id="updateAppointmentBtn" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Update Appointment</button>
+      <button id="cancelAppointmentBtn" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cancel Appointment</button>
+    </div>
+
+    <!-- Form container aligned on the right side -->
+    <div class="form-container">
+      <!-- Schedule Appointment Form -->
+      <div id="scheduleAppointmentForm" class="form-wrapper">
+  <!--      <h1>Schedule Appointment</h1>-->
+        <!-- Form content -->
+        <div class="formbold-main-wrapper">
+          <!-- Author: FormBold Team -->
+          <!-- Learn More: https://formbold.com -->
+
+          <div class="formbold-form-wrapper">
+            <form action ="#" th:action="@{/app}"  th:object="${scheduleAppointment}" method="POST">
+              <h1> Schedule Appointment</h1>
+              <div class="formbold-mb-5">
+                <label for="name"   class="formbold-form-label">  Full Name </label>
+                <input type="text" th:field="*{patientName}" name="name" id="name" placeholder="Full Name" class="formbold-form-input"/>
+              </div>
+              <div class="formbold-mb-5">
+                <label for="phone"  class="formbold-form-label"> Phone Number </label>
+                <input type="text" th:field="*{patientPhoneNumber}" name="phone" id="phone" placeholder="Enter your phone number" class="formbold-form-input" />
+              </div>
+              <div class="formbold-mb-5">
+                <label for="email" class="formbold-form-label"> Email Address </label>
+                <input type="email" th:field="*{eMail}"  name="email" id="email" placeholder="Enter your email" class="formbold-form-input"/>
+              </div>
+              <div class="flex flex-wrap formbold--mx-3">
+                <div class="w-full sm:w-half formbold-px-3">
+                  <div class="formbold-mb-5 w-full">
+                    <label for="dateOfBirth"  class="formbold-form-label"> Date Of Birth</label>
+                    <input type="date" th:field="*{dateOfBirth}"name="date" id="dateOfBirth" class="formbold-form-input" />
+                  </div>
+                  <div class="formbold-mb-5 w-full">
+                    <!--          <label for="docName"  class="formbold-form-label"> Doctor Name</label>-->
+                    <!--          <input type="text" th:field="*{doctorName}" name="doName" id="docName" class="formbold-form-input" />-->
+                    <label for="doctor" class="formbold-form-label">Select Doctor:</label>
+                    <select id="doctor" name="doctor"  th:field="*{doctorName}" class="large-select">
+                      <option th:each="doctor : ${doctors}"  th:value="${doctor.doctorName}" th:text="${doctor.doctorName}"></option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-wrap formbold--mx-3">
+                <div class="w-full sm:w-half formbold-px-3">
+                  <div class="formbold-mb-5 w-full">
+                    <label for="date"  class="formbold-form-label"> Date </label>
+                    <input type="date" th:field="*{appointmentDate}" name="date1" id="date" class="formbold-form-input" />
+                  </div>
+                </div>
+                <div class="w-full sm:w-half formbold-px-3">
+                  <div class="formbold-mb-5">
+                    <label for="time" class="formbold-form-label"> Time </label>
+                    <input type="time" th:field="*{appointmentTime}" name="time1" id="time" class="formbold-form-input"/>
+                  </div>
+                </div>
+                <div>
+                  <button class="formbold-btn" >Book Appointment</button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Update Appointment Form -->
+      <div id="updateAppointmentForm" class="form-wrapper" style="display: none;">
+        <h1>Update Appointment</h1>
+        <form action="#" th:action="@{/schedule/ }"  th:object="${scheduleAppointment}"method="get">
+
+          <label for="appointmentId">Appointment ID:</label>
+          <input  type="text" id="appointmentId" name="appointmentId" >
+          <button type="submit">Update Appointment</button>
+        </form>
+        <!-- Form content -->
+      </div>
+
+      <!-- Cancel Appointment Form -->
+      <div id="cancelAppointmentForm" class="form-wrapper" style="display: none;">
+        <h1>Cancel Appointment</h1>
+        <!-- Form content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer content -->
+
+  <script>
+      // Get the buttons and forms
+      const scheduleAppointmentBtn = document.getElementById('scheduleAppointmentBtn');
+      const updateAppointmentBtn = document.getElementById('updateAppointmentBtn');
+      const cancelAppointmentBtn = document.getElementById('cancelAppointmentBtn');
+      const scheduleAppointmentForm = document.getElementById('scheduleAppointmentForm');
+      const updateAppointmentForm = document.getElementById('updateAppointmentForm');
+      const cancelAppointmentForm = document.getElementById('cancelAppointmentForm');
+
+      // Add event listeners to the buttons
+      scheduleAppointmentBtn.addEventListener('click', function () {
+          showForm(scheduleAppointmentForm);
+      });
+
+      updateAppointmentBtn.addEventListener('click', function () {
+          showForm(updateAppointmentForm);
+      });
+
+      cancelAppointmentBtn.addEventListener('click', function () {
+          showForm(cancelAppointmentForm);
+      });
+
+      // Function to show a specific form and hide the others
+      function showForm(form) {
+          scheduleAppointmentForm.style.display = 'none';
+          updateAppointmentForm.style.display = 'none';
+          cancelAppointmentForm.style.display = 'none';
+
+          form.style.display = 'block';
+      }
+  </script>
+  </body>
+  </html>
