@@ -7,6 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 @NoArgsConstructor
@@ -29,4 +30,7 @@ public class Patient {
     private byte[] fileData;
     @OneToMany(mappedBy = "patient")
     private List<ScheduleAppointment> appointments;
+
+    public Patient(String john_smith, String s, String s1, LocalDate of) {
+    }
 }

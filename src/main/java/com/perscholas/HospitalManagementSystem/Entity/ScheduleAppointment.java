@@ -1,6 +1,7 @@
 package com.perscholas.HospitalManagementSystem.Entity;
 
 import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import java.util.List;
 @Data
 @Entity
 @NoArgsConstructor
+
 public class ScheduleAppointment {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -45,6 +47,20 @@ public class ScheduleAppointment {
     @ManyToOne
     @JoinColumn(name = "patient_id")
     private Patient patient;
+
+    public ScheduleAppointment(Long appointmentId, String patientName, String patientPhoneNumber, String eMail, LocalDate dateOfBirth, String doctorName, LocalDate appointmentDate, LocalTime appointmentTime, Doctor doctor, Patient patient) {
+        this.appointmentId = appointmentId;
+        this.patientName = patientName;
+        this.patientPhoneNumber = patientPhoneNumber;
+        this.eMail = eMail;
+        this.dateOfBirth = dateOfBirth;
+        this.doctorName = doctorName;
+        this.appointmentDate = appointmentDate;
+        this.appointmentTime = appointmentTime;
+        this.doctor = doctor;
+        this.patient = patient;
+    }
+
     public void setDoctorIdByName(List<Doctor> doctors) {
         for (Doctor doctor : doctors) {
             if (doctor.getDoctorName().equals(doctorName)) {
