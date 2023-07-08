@@ -9,6 +9,9 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -72,74 +75,48 @@ public class PatientController {
         return "error_page";
     }
     }
-    @GetMapping("/patient/file/{patientId}")
-    public String downloadFile(@PathVariable("patientId") Long patientId, HttpServletResponse response,Model model) throws IOException {
-        // Fetch the patient entity from the repository
-        Optional<Patient> optionalPatient = patientRepository.findById(patientId);
 
-            if (optionalPatient.isPresent()) {
-                Patient patient = optionalPatient.get();
-                byte[] fileData = patient.getFileData();
+@GetMapping("/patient/file/{patientId}")
+public ResponseEntity<ByteArrayResource> downloadFile(@PathVariable("patientId") Long patientId) {
+    // Fetch the patient entity from the repository
+    Optional<Patient> optionalPatient = patientRepository.findById(patientId);
 
-                try {
-                    // Set the appropriate response headers
-                    response.setContentType("application/octet-stream");
-                    response.setHeader("Content-Disposition", "attachment; filename=file_name.ext");
+    if (optionalPatient.isPresent()) {
+        Patient patient = optionalPatient.get();
+        byte[] fileData = patient.getFileData();
 
-                    // Write the file content to the response output stream
-                    response.getOutputStream().write(fileData);
-                    response.getOutputStream().flush();
-                    model.addAttribute("patientId", patientId);
-                    model.addAttribute("fileData", fileData);
-                    return "pdf";
-                } catch (IOException e) {
-                    throw new RuntimeException("Failed to download the file.", e);
-                }
-            } else {
-                response.sendError(HttpServletResponse.SC_NOT_FOUND);
-                return "home";
-            }
+        try (ByteArrayInputStream inputStream = new ByteArrayInputStream(fileData);
+             PDDocument document = PDDocument.load(inputStream)) {
+
+            // Extract the text content from the PDF document
+            PDFTextStripper stripper = new PDFTextStripper();
+            String text = stripper.getText(document);
+
+            // Process the extracted text as needed
+            System.out.println(text);
+
+            // Create a ByteArrayResource with the file data to return as the response
+            ByteArrayResource resource = new ByteArrayResource(fileData);
+
+            // Setting the appropriate response headers
+            HttpHeaders headers = new HttpHeaders();
+            headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=\"" + text + ".pdf\"");
+
+            return ResponseEntity.ok()
+                    .headers(headers)
+                    .contentLength(fileData.length)
+                    .contentType(MediaType.APPLICATION_OCTET_STREAM)
+                    .body(resource);
+
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to download the file.", e);
         }
+    } else {
+        throw new RuntimeException("Patient not found");
+    }
+}
 
-
-//    @GetMapping("/patient/file/{patientId}")
-//    public void downloadFile(@PathVariable("id") Long patientId) {
-//        // Fetch the patient entity from the repository
-//        Optional<Patient> optionalPatient = patientRepository.findById(patientId);
-//
-//        if (optionalPatient.isPresent()) {
-//            Patient patient = optionalPatient.get();
-//            byte[] fileData = patient.getFileData();
-//
-//            try {
-////                // Set the appropriate response headers
-////                response.setContentType("application/octet-stream");
-////                response.setHeader("Content-Disposition", "attachment; filename=file_name.ext");
-////
-////                // Write the file content to the response output stream
-////                response.getOutputStream().write(fileData);
-////                response.getOutputStream().flush();
-//
-//                ByteArrayInputStream inputStream = new ByteArrayInputStream(fileData);
-//                PDDocument document = PDDocument.load(inputStream)) {
-//
-//                    // Extract the text content from the PDF document
-//                    PDFTextStripper stripper = new PDFTextStripper();
-//                    String text = stripper.getText(document);
-//
-//                    // Process the extracted text as needed
-//                    System.out.println(text);
-//
-//                    // Create a ByteArrayResource with the file data to return as the response
-//                    ByteArrayResource resource = new ByteArrayResource(fileData);
-//
-//                }
-//        } catch (IOException e) {
-//                throw new RuntimeException(e);
-//            }
-//        }
-
-    @PostMapping("/savePatient")
+@PostMapping("/savePatient")
     public String savePatient(@ModelAttribute("patient") Patient patient,Model model, @RequestParam("file") MultipartFile file)  {
 
 
