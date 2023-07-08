@@ -43,10 +43,7 @@ public class ScheduleAppointmentController {
     }
     @PostMapping("/app")
     public String processAppointmentForm(@ModelAttribute("scheduleAppointment")  ScheduleAppointment scheduleAppointment ) {
-//        boolean exists = scheduleAppointmentRepository.existsByAppointmentTimeAndDoctor(
-//              scheduleAppointment.getAppointmentTime(), scheduleAppointment.getDoctor());
-
-       boolean exists = scheduleAppointmentRepository.existsByAppointmentTime(scheduleAppointment.getAppointmentTime());
+        boolean exists = scheduleAppointmentRepository.existsByAppointmentTime(scheduleAppointment.getAppointmentTime());
         boolean exists1 = scheduleAppointmentRepository.existsByDoctorName(scheduleAppointment.getDoctorName());
    if (exists && exists1) {
        throw new AppointmentTimeAlreadyExistsException();
@@ -61,32 +58,40 @@ public class ScheduleAppointmentController {
                 "Appointment Scheduled"," Your appointment with "+scheduleAppointment.getDoctorName()+
                         " is scheduled at "+scheduleAppointment.getAppointmentTime()+ " on "+
                         scheduleAppointment.getAppointmentDate() +" . ");
-        return "success";}
+        return "schedule_success";}
     }
     @GetMapping("/schedule/")
     public String getScheduleByAppointmentId(@RequestParam("appointmentId")  Long appointmentId, Model model)
     {
         ScheduleAppointment scheduleAppointment=new ScheduleAppointment();
+        try{
         ScheduleAppointment scheduleAppointment1=scheduleAppointmentService.getScheduleById(appointmentId);
         model.addAttribute("scheduleAppointment",scheduleAppointment);
-        return "update_schedule";
+        return "update_schedule";}
+        catch (RuntimeException e) {
+            model.addAttribute("errorMessage", "Schedule appointment not found");
+            return "error_page";
+        }
     }
     @PostMapping("/schedule/update")
     public String updateSchedule(@ModelAttribute("scheduleAppointment") ScheduleAppointment scheduleAppointment, Model model) {
-        // Perform the necessary logic to update the schedule with the provided data
-        // You can access the properties of the scheduleAppointment object, such as scheduleAppointment.getPatientName(), scheduleAppointment.getAppointmentDate(), etc.
-        // Update the schedule using the scheduleAppointmentService or any other service or repository
-
-        // Example: Update the schedule using scheduleAppointmentService
+        try{
+        //Update the schedule using scheduleAppointmentService
         scheduleAppointmentService.updateSchedule(scheduleAppointment);
 
         // Add a success message to the model to be displayed on the update_schedule view
         model.addAttribute("successMessage", "Schedule updated successfully!");
 
         // Redirect to a relevant page or return the update_schedule view
-        return "redirect:/schedule/";
+        return "redirect:/schedule/";}
+        catch (RuntimeException e) {
+            // Handle the exception and display an error message
+            model.addAttribute("errorMessage", "Failed to update the schedule");
+
+            // Redirect to an error page or return an error view
+            return "error_page";}
     }
-    @Scheduled(cron = "0 0 12 * * ?") // Run the reminder task every day at 12:00 PM
+    @Scheduled(cron = "0 0 10 * * ?") // Run the reminder task every day at 10:00 PM
     private void sendReminderEmails() {
         LocalDate currentDate = LocalDate.now();
         LocalDate reminderDate = currentDate.plusDays(1); // Calculate the reminder date as tomorrow
