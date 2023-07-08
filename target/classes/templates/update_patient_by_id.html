@@ -7,10 +7,10 @@
 </head>
 <body>
 <h1>Edit Patient</h1>
-<form action="#" th:action="@{/patient/edit/ }"  th:object="${patient}"method="get">
+<form action="#" th:action="@{/patient/edit/update_by_id }"  th:object="${patient}"method="get">
   <label for="patientId">Patient ID:</label>
   <input  type="text" id="patientId" name="patientId" >
-  <button type="submit">Edit</button>
+  <button type="submit">Update</button>
 </form>
 
 </body>

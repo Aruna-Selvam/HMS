@@ -46,6 +46,12 @@ public class PatientController {
         model.addAttribute("patient", patient);
         return "patient_form";
     }
+    @GetMapping("/patient/update_patient_by_id")
+    public String showPatientFormForUpdate(Model model) {
+        Patient patient=new Patient();
+        model.addAttribute("patient", patient);
+        return "update_patient_by_id";
+    }
     @GetMapping("/patient/view")
     public String getAllPatients(Model model) {
         List<Patient> patients = patientService.getAllPatients();
@@ -165,6 +171,34 @@ public ResponseEntity<ByteArrayResource> downloadFile(@PathVariable("patientId")
                 return "error_page";
                     }
     }
+    @GetMapping("/patient/edit/update_by_id")
+    public String showUpdatePatientFormById(@RequestParam("patientId") Long patientId, Model model) {
+        try {
+            // Fetch the existing patient from the database
+            Patient patient = patientService.getPatientById(patientId);
+
+            // Pass the patient object to the view
+            model.addAttribute("patient", patient);
+            model.addAttribute("patientId", patientId);
+            // Return the view name for the patient update form
+            return "patient_update";
+        } catch (PatientNotFoundException e) {
+            // Catch the exception when the patient is not found
+            model.addAttribute("errorMessage", "Patient not found");
+            return "error_page";
+        }
+    }
+    @PostMapping("/patient/update/{patientId}")
+    public String updatePatientById(@PathVariable("patientId") Long patientId, @ModelAttribute("patient") Patient patient,@RequestParam("file") MultipartFile file,Model model) {
+        try {
+            patientService.updatePatientById(patientId, patient, file);
+            return "up_success";
+        } catch (PatientNotFoundException e) {
+            // Catch the exception when the patient is not found
+            return "error_page";
+        }
+    }
+
     @GetMapping("/patient/delete/{patientId}")
     public String deletPatient(@PathVariable("patientId") Long patientId){
         try{
