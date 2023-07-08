@@ -49,7 +49,7 @@ public class PatientServiceImpl implements  PatientService {
         existingPatient.setEmail(patient.getEmail());
         existingPatient.setContactNumber(patient.getContactNumber());
         existingPatient.setAddress(patient.getAddress());
-        // ... Set other properties as needed
+
         if (!file.isEmpty()) {
             try {
                 existingPatient.setFileData(file.getBytes());
@@ -58,6 +58,7 @@ public class PatientServiceImpl implements  PatientService {
                 // Handle the exception as per your application's requirements
             }
         }
+
         // Save the updated patient
         patientRepository.save(existingPatient);
         return  existingPatient;

@@ -150,6 +150,7 @@ footer{
     justify-items: auto;
     background-color: #bbbdc1;
     justify-content:space-between;
+
 }
 footer .col{
     display:flex;
