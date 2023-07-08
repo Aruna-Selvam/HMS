@@ -2,8 +2,10 @@ package com.perscholas.HospitalManagementSystem.Exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -14,6 +16,26 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
-    // Add more exception handlers for other custom exceptions or handle other exceptions as needed
+    @ExceptionHandler(RuntimeException.class)
+    public ModelAndView handleRuntimeException(RuntimeException e) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("error_page");
+        modelAndView.addObject("errorMessage", "An error occurred: " + e.getMessage());
+        return modelAndView;
+    }
 
+    @ExceptionHandler(NoPatientsFoundException.class)
+    public ModelAndView handleNoPatientsFoundException(NoPatientsFoundException e) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("error_page");
+        modelAndView.addObject("errorMessage", "An error occurred: " + e.getMessage());
+        return modelAndView;
+    }
+    @ExceptionHandler(PatientNotFoundException.class)
+    public ModelAndView handlePatientNotFoundException(PatientNotFoundException e, Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("error_page");
+        modelAndView.addObject("errorMessage", "An error occurred: " + e.getMessage());
+        return modelAndView;
+    }
 }

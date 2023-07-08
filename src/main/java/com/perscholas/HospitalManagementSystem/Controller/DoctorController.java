@@ -16,8 +16,13 @@ public class DoctorController {
 
     @GetMapping("/appointment")
     public String showAppointmentForm(Model model) {
+        try{
         List<Doctor> doctors = doctorRepository.findAll();
         model.addAttribute("doctors", doctors);
-        return "appointment-form";
+        return "appointment-form";}
+        catch (Exception e) {
+            model.addAttribute("errorMessage", "Failed to load doctor information");
+            return "error_page";
+        }
     }
 }

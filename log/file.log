@@ -10783,3 +10783,493 @@ Caused by: java.lang.IllegalStateException: Failed to replace DataSource with an
 2023-07-07 20:11:15.125 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-07-07 20:11:15.128 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2023-07-07 20:11:15.149 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 20:32:32.726 INFO  c.p.H.HospitalManagementSystemApplication - Starting HospitalManagementSystemApplication using Java 11.0.16.1 on Yashwanth with PID 1352 (C:\Aruna\PerScholas\HospitalManagementSystem\target\classes started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 20:32:32.727 DEBUG c.p.H.HospitalManagementSystemApplication - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 20:32:32.729 INFO  c.p.H.HospitalManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 20:32:32.808 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-07 20:32:32.809 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-07 20:32:33.824 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 20:32:33.915 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 3 JPA repository interfaces.
+2023-07-07 20:32:35.129 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-07-07 20:32:35.145 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-07-07 20:32:35.146 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-07 20:32:35.147 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-07-07 20:32:35.687 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-07 20:32:35.687 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2878 ms
+2023-07-07 20:32:35.984 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 20:32:36.065 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 20:32:36.298 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 20:32:36.425 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 20:32:36.908 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 20:32:36.932 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 20:32:38.093 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 20:32:38.105 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 20:32:39.045 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 20:32:39.620 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-07 20:32:39.640 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-07-07 20:32:39.688 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-07-07 20:32:39.708 INFO  c.p.H.HospitalManagementSystemApplication - Started HospitalManagementSystemApplication in 7.785 seconds (JVM running for 9.017)
+2023-07-07 20:33:13.355 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-07 20:33:13.358 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-07 20:33:13.361 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-07-07 20:47:23.740 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 20:47:23.747 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 20:47:23.792 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 20:47:31.270 INFO  c.p.H.HospitalManagementSystemApplication - Starting HospitalManagementSystemApplication using Java 11.0.16.1 on Yashwanth with PID 8444 (C:\Aruna\PerScholas\HospitalManagementSystem\target\classes started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 20:47:31.271 DEBUG c.p.H.HospitalManagementSystemApplication - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 20:47:31.272 INFO  c.p.H.HospitalManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 20:47:31.364 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-07 20:47:31.365 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-07 20:47:32.387 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 20:47:32.502 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 99 ms. Found 3 JPA repository interfaces.
+2023-07-07 20:47:33.801 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-07-07 20:47:33.821 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-07-07 20:47:33.821 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-07 20:47:33.822 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-07-07 20:47:34.364 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-07 20:47:34.365 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2999 ms
+2023-07-07 20:47:34.696 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 20:47:34.784 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 20:47:35.053 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 20:47:35.202 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 20:47:35.601 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 20:47:35.626 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 20:47:37.044 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 20:47:37.062 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 20:47:38.026 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 20:47:38.602 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-07 20:47:38.619 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-07-07 20:47:38.664 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-07-07 20:47:38.687 INFO  c.p.H.HospitalManagementSystemApplication - Started HospitalManagementSystemApplication in 8.281 seconds (JVM running for 9.442)
+2023-07-07 20:47:59.398 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-07 20:47:59.400 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-07 20:47:59.407 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2023-07-07 20:47:59.698 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.perscholas.HospitalManagementSystem.Exception.NoPatientsFoundException: No patients found]
+2023-07-07 20:51:52.125 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: getOutputStream() has already been called for this response] with root cause
+java.lang.IllegalStateException: getOutputStream() has already been called for this response
+	at org.apache.catalina.connector.Response.getWriter(Response.java:569)
+	at org.apache.catalina.connector.ResponseFacade.getWriter(ResponseFacade.java:190)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:364)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1406)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1150)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-07-07 20:51:52.155 ERROR o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [/patient/file/1] and exception [getOutputStream() has already been called for this response] as the response has already been committed. As a result, the response may have the wrong status code.
+2023-07-07 20:52:14.507 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "update_by_id"]
+2023-07-07 20:59:09.009 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 20:59:09.015 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 20:59:09.033 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 20:59:15.760 INFO  c.p.H.HospitalManagementSystemApplication - Starting HospitalManagementSystemApplication using Java 11.0.16.1 on Yashwanth with PID 22908 (C:\Aruna\PerScholas\HospitalManagementSystem\target\classes started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 20:59:15.762 DEBUG c.p.H.HospitalManagementSystemApplication - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 20:59:15.763 INFO  c.p.H.HospitalManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 20:59:15.840 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-07 20:59:15.841 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-07 20:59:16.895 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 20:59:17.020 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 104 ms. Found 3 JPA repository interfaces.
+2023-07-07 20:59:18.200 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-07-07 20:59:18.216 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-07-07 20:59:18.217 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-07 20:59:18.218 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-07-07 20:59:18.746 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-07 20:59:18.747 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2905 ms
+2023-07-07 20:59:19.027 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 20:59:19.096 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 20:59:19.501 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 20:59:19.731 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 20:59:20.177 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 20:59:20.199 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 20:59:21.462 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 20:59:21.477 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 20:59:22.410 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 20:59:22.963 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-07 20:59:22.978 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-07-07 20:59:23.017 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-07-07 20:59:23.036 INFO  c.p.H.HospitalManagementSystemApplication - Started HospitalManagementSystemApplication in 8.063 seconds (JVM running for 9.16)
+2023-07-07 20:59:31.091 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-07 20:59:31.094 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-07 20:59:31.097 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-07-07 21:00:09.628 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.perscholas.HospitalManagementSystem.Exception.NoPatientsFoundException: No patients found]
+2023-07-07 21:09:27.361 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:09:27.367 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 21:09:27.391 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 21:09:34.003 INFO  c.p.H.HospitalManagementSystemApplication - Starting HospitalManagementSystemApplication using Java 11.0.16.1 on Yashwanth with PID 23796 (C:\Aruna\PerScholas\HospitalManagementSystem\target\classes started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 21:09:34.004 DEBUG c.p.H.HospitalManagementSystemApplication - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 21:09:34.005 INFO  c.p.H.HospitalManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 21:09:34.081 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-07 21:09:34.081 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-07 21:09:35.115 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 21:09:35.217 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 3 JPA repository interfaces.
+2023-07-07 21:09:36.364 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-07-07 21:09:36.377 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-07-07 21:09:36.377 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-07 21:09:36.378 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-07-07 21:09:36.897 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-07 21:09:36.897 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2815 ms
+2023-07-07 21:09:37.191 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 21:09:37.258 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 21:09:37.574 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 21:09:37.732 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 21:09:38.185 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 21:09:38.216 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 21:09:39.416 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 21:09:39.429 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:09:40.338 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 21:09:40.902 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-07 21:09:40.918 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-07-07 21:09:40.947 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-07-07 21:09:40.966 INFO  c.p.H.HospitalManagementSystemApplication - Started HospitalManagementSystemApplication in 7.722 seconds (JVM running for 8.824)
+2023-07-07 21:09:56.287 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-07 21:09:56.288 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-07 21:09:56.293 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2023-07-07 21:11:16.815 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.perscholas.HospitalManagementSystem.Exception.NoPatientsFoundException: No patients found]
+2023-07-07 21:28:23.948 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:28:23.952 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 21:28:23.968 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 21:28:30.900 INFO  c.p.H.HospitalManagementSystemApplication - Starting HospitalManagementSystemApplication using Java 11.0.16.1 on Yashwanth with PID 18668 (C:\Aruna\PerScholas\HospitalManagementSystem\target\classes started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 21:28:30.902 DEBUG c.p.H.HospitalManagementSystemApplication - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 21:28:30.903 INFO  c.p.H.HospitalManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 21:28:30.981 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-07 21:28:30.982 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-07 21:28:32.203 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 21:28:32.312 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 3 JPA repository interfaces.
+2023-07-07 21:28:33.570 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-07-07 21:28:33.586 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-07-07 21:28:33.587 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-07 21:28:33.587 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-07-07 21:28:34.085 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-07 21:28:34.086 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3103 ms
+2023-07-07 21:28:34.399 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 21:28:34.475 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 21:28:34.769 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 21:28:34.909 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 21:28:35.367 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 21:28:35.389 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 21:28:36.713 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 21:28:36.732 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:28:38.060 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 21:28:38.700 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-07 21:28:38.718 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-07-07 21:28:38.763 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-07-07 21:28:38.782 INFO  c.p.H.HospitalManagementSystemApplication - Started HospitalManagementSystemApplication in 8.643 seconds (JVM running for 9.862)
+2023-07-07 21:28:48.136 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-07 21:28:48.138 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-07 21:28:48.145 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2023-07-07 21:35:04.315 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:35:04.318 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 21:35:04.342 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 21:35:11.124 INFO  c.p.H.HospitalManagementSystemApplication - Starting HospitalManagementSystemApplication using Java 11.0.16.1 on Yashwanth with PID 396 (C:\Aruna\PerScholas\HospitalManagementSystem\target\classes started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 21:35:11.126 DEBUG c.p.H.HospitalManagementSystemApplication - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 21:35:11.127 INFO  c.p.H.HospitalManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 21:35:11.204 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-07 21:35:11.205 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-07 21:35:12.595 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 21:35:12.697 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
+2023-07-07 21:35:13.861 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-07-07 21:35:13.880 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-07-07 21:35:13.880 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-07 21:35:13.882 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-07-07 21:35:14.435 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-07 21:35:14.435 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3229 ms
+2023-07-07 21:35:14.753 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 21:35:14.884 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 21:35:15.129 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 21:35:15.344 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 21:35:15.823 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 21:35:15.853 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 21:35:17.425 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 21:35:17.438 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:35:18.514 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 21:35:19.150 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-07 21:35:19.169 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-07-07 21:35:19.200 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-07-07 21:35:19.220 INFO  c.p.H.HospitalManagementSystemApplication - Started HospitalManagementSystemApplication in 8.918 seconds (JVM running for 10.145)
+2023-07-07 21:35:29.692 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:35:29.697 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 21:35:29.729 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 21:35:35.944 INFO  c.p.H.HospitalManagementSystemApplication - Starting HospitalManagementSystemApplication using Java 11.0.16.1 on Yashwanth with PID 19088 (C:\Aruna\PerScholas\HospitalManagementSystem\target\classes started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 21:35:35.946 DEBUG c.p.H.HospitalManagementSystemApplication - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 21:35:35.947 INFO  c.p.H.HospitalManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 21:35:36.032 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-07 21:35:36.032 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-07 21:35:37.147 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 21:35:37.251 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 90 ms. Found 3 JPA repository interfaces.
+2023-07-07 21:35:38.440 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-07-07 21:35:38.453 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-07-07 21:35:38.454 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-07 21:35:38.454 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-07-07 21:35:38.884 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-07 21:35:38.885 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2852 ms
+2023-07-07 21:35:39.186 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 21:35:39.238 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 21:35:39.476 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 21:35:39.621 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 21:35:40.103 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 21:35:40.127 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 21:35:41.341 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 21:35:41.354 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:35:42.292 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 21:35:42.886 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-07 21:35:42.910 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-07-07 21:35:42.942 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-07-07 21:35:42.963 INFO  c.p.H.HospitalManagementSystemApplication - Started HospitalManagementSystemApplication in 7.807 seconds (JVM running for 8.838)
+2023-07-07 21:36:01.754 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-07 21:36:01.755 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-07 21:36:01.756 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-07 21:37:19.312 ERROR org.thymeleaf.TemplateEngine - [THYMELEAF][http-nio-8081-exec-7] Exception processing template "schedule": An error happened during template parsing (template: "class path resource [templates/schedule.html]")
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/schedule.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1406)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1150)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.attoparser.ParseException: Error during execution of processor 'org.thymeleaf.spring5.processor.SpringInputGeneralFieldTagProcessor' (template: "schedule" - line 60, col 36)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Error during execution of processor 'org.thymeleaf.spring5.processor.SpringInputGeneralFieldTagProcessor' (template: "schedule" - line 60, col 36)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:117)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlElement.handleStandaloneElementEnd(HtmlElement.java:79)
+	at org.attoparser.HtmlMarkupHandler.handleStandaloneElementEnd(HtmlMarkupHandler.java:241)
+	at org.attoparser.MarkupEventProcessorHandler.handleStandaloneElementEnd(MarkupEventProcessorHandler.java:327)
+	at org.attoparser.ParsingElementMarkupUtil.parseStandaloneElement(ParsingElementMarkupUtil.java:96)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:706)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: java.lang.IllegalStateException: Neither BindingResult nor plain target object for bean name 'scheduleAppointment' available as request attribute
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:153)
+	at org.springframework.web.servlet.support.RequestContext.getBindStatus(RequestContext.java:903)
+	at org.thymeleaf.spring5.context.webmvc.SpringWebMvcThymeleafRequestContext.getBindStatus(SpringWebMvcThymeleafRequestContext.java:227)
+	at org.thymeleaf.spring5.util.FieldUtils.getBindStatusFromParsedExpression(FieldUtils.java:306)
+	at org.thymeleaf.spring5.util.FieldUtils.getBindStatus(FieldUtils.java:253)
+	at org.thymeleaf.spring5.util.FieldUtils.getBindStatus(FieldUtils.java:227)
+	at org.thymeleaf.spring5.processor.AbstractSpringFieldTagProcessor.doProcess(AbstractSpringFieldTagProcessor.java:174)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	... 63 common frames omitted
+2023-07-07 21:37:19.314 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/schedule.html]")] with root cause
+java.lang.IllegalStateException: Neither BindingResult nor plain target object for bean name 'scheduleAppointment' available as request attribute
+	at org.springframework.web.servlet.support.BindStatus.<init>(BindStatus.java:153)
+	at org.springframework.web.servlet.support.RequestContext.getBindStatus(RequestContext.java:903)
+	at org.thymeleaf.spring5.context.webmvc.SpringWebMvcThymeleafRequestContext.getBindStatus(SpringWebMvcThymeleafRequestContext.java:227)
+	at org.thymeleaf.spring5.util.FieldUtils.getBindStatusFromParsedExpression(FieldUtils.java:306)
+	at org.thymeleaf.spring5.util.FieldUtils.getBindStatus(FieldUtils.java:253)
+	at org.thymeleaf.spring5.util.FieldUtils.getBindStatus(FieldUtils.java:227)
+	at org.thymeleaf.spring5.processor.AbstractSpringFieldTagProcessor.doProcess(AbstractSpringFieldTagProcessor.java:174)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlElement.handleStandaloneElementEnd(HtmlElement.java:79)
+	at org.attoparser.HtmlMarkupHandler.handleStandaloneElementEnd(HtmlMarkupHandler.java:241)
+	at org.attoparser.MarkupEventProcessorHandler.handleStandaloneElementEnd(MarkupEventProcessorHandler.java:327)
+	at org.attoparser.ParsingElementMarkupUtil.parseStandaloneElement(ParsingElementMarkupUtil.java:96)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:706)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1406)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1150)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-07-07 21:37:55.359 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:37:55.362 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 21:37:55.373 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 21:37:58.721 INFO  c.p.H.HospitalManagementSystemApplication - Starting HospitalManagementSystemApplication using Java 11.0.16.1 on Yashwanth with PID 21516 (C:\Aruna\PerScholas\HospitalManagementSystem\target\classes started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 21:37:58.723 DEBUG c.p.H.HospitalManagementSystemApplication - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 21:37:58.724 INFO  c.p.H.HospitalManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 21:37:58.790 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-07 21:37:58.792 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-07 21:37:59.786 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 21:37:59.880 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
+2023-07-07 21:38:00.909 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-07-07 21:38:00.926 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-07-07 21:38:00.926 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-07 21:38:00.927 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-07-07 21:38:01.267 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-07 21:38:01.267 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2474 ms
+2023-07-07 21:38:01.539 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 21:38:01.601 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 21:38:01.783 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 21:38:01.899 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 21:38:02.274 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 21:38:02.295 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 21:38:03.296 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 21:38:03.307 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:38:03.976 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 21:38:04.361 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-07 21:38:04.373 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-07-07 21:38:04.405 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-07-07 21:38:04.418 INFO  c.p.H.HospitalManagementSystemApplication - Started HospitalManagementSystemApplication in 6.451 seconds (JVM running for 7.246)
+2023-07-07 21:39:03.706 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-07 21:39:03.707 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-07 21:39:03.709 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-07-07 21:40:11.840 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:40:11.843 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 21:40:11.856 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 21:49:50.639 INFO  c.p.H.HospitalManagementSystemApplication - Starting HospitalManagementSystemApplication using Java 11.0.16.1 on Yashwanth with PID 17996 (C:\Aruna\PerScholas\HospitalManagementSystem\target\classes started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 21:49:50.641 DEBUG c.p.H.HospitalManagementSystemApplication - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 21:49:50.642 INFO  c.p.H.HospitalManagementSystemApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 21:49:50.713 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-07 21:49:50.714 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-07 21:49:51.655 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 21:49:51.744 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 3 JPA repository interfaces.
+2023-07-07 21:49:52.786 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-07-07 21:49:52.802 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-07-07 21:49:52.803 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-07 21:49:52.803 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
+2023-07-07 21:49:53.103 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-07 21:49:53.103 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2388 ms
+2023-07-07 21:49:53.358 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 21:49:53.413 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 21:49:53.608 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 21:49:53.723 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 21:49:54.109 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 21:49:54.128 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 21:49:55.132 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 21:49:55.144 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:49:55.737 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 21:49:56.184 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-07 21:49:56.197 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-07-07 21:49:56.220 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-07-07 21:49:56.234 INFO  c.p.H.HospitalManagementSystemApplication - Started HospitalManagementSystemApplication in 6.268 seconds (JVM running for 7.1)
+2023-07-07 21:52:16.770 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 21:52:16.774 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 21:52:16.794 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

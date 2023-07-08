@@ -1,6 +1,8 @@
 package com.perscholas.HospitalManagementSystem.Controller;
 
 import com.perscholas.HospitalManagementSystem.Entity.Patient;
+import com.perscholas.HospitalManagementSystem.Exception.NoPatientsFoundException;
+import com.perscholas.HospitalManagementSystem.Exception.PatientNotFoundException;
 import com.perscholas.HospitalManagementSystem.Repository.PatientRepository;
 import com.perscholas.HospitalManagementSystem.Service.PatientService;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -41,15 +43,12 @@ public class PatientController {
         model.addAttribute("patient", patient);
         return "patient_form";
     }
-//    @GetMapping("/patient/view")
-//    public String showPatients(Model model) {
-//        Patient patient=new Patient();
-//        model.addAttribute("patient", patient);
-//        return "view_patient_details";
-//    }
     @GetMapping("/patient/view")
     public String getAllPatients(Model model) {
         List<Patient> patients = patientService.getAllPatients();
+        if(patients.isEmpty()){
+            throw new NoPatientsFoundException("No patients found");
+        }
         model.addAttribute("patients", patients);
         return "view_patient_details";
     }
@@ -63,12 +62,15 @@ public class PatientController {
     @GetMapping("/patient/")
     public String getPatientByPatientId(@RequestParam("patientId")  Long patientId, Model model)
     {
-
-        System.out.println("check");
+        try{
         Patient patient=patientService.getPatientById(patientId);
-        System.out.println(patient.getEmail());
-       model.addAttribute("patient", patient);
+        model.addAttribute("patient", patient);
         return "view";
+        }
+        catch (RuntimeException e){
+        model.addAttribute("errorMessage", "Patient not found");
+        return "error_page";
+    }
     }
     @GetMapping("/patient/file/{patientId}")
     public String downloadFile(@PathVariable("patientId") Long patientId, HttpServletResponse response,Model model) throws IOException {
@@ -147,7 +149,7 @@ public class PatientController {
                 patient.setFileData(fileContent);
             } catch (IOException e) {
                 e.printStackTrace();
-                // Handle file upload error
+                // catch file upload error
             }
         }
         patientService.savePatient(patient);
@@ -157,6 +159,7 @@ public class PatientController {
     }
     @GetMapping("/patient/edit/{patientId}")
     public String viewPatientDetails(@PathVariable("patientId") Long patientId, Model model) {
+        try{
         // Fetch the patient from the database
         Patient patient = patientService.getPatientById(patientId);
 
@@ -164,20 +167,36 @@ public class PatientController {
         model.addAttribute("patient", patient);
 
         // Return the view name
-        return "patient_update";
+        return "patient_update";}
+        catch (PatientNotFoundException e) {
+            // catch the exception when the patient is not found
+            model.addAttribute("errorMessage", "Patient not found");
+            return "error_page";
+        }
     }
 
-    @PutMapping("/patient/edit/{patientId}")
-    public String updatePatient(@PathVariable("patientId") Long patientId, Model model, @ModelAttribute Patient patient,@RequestParam("file") MultipartFile file) {
-        // Fetch the existing patient from the database
-        patientService.updatePatientById(patientId,patient,file);
-        return "success";
+        @PutMapping("/patient/edit/{patientId}")
+        public String updatePatient(@PathVariable("patientId") Long patientId, Model model, @ModelAttribute Patient patient,@RequestParam("file") MultipartFile file) {
+            try {
+                // Fetch the existing patient from the database
+                patientService.updatePatientById(patientId, patient, file);
+                return "success";
+            }
+            catch (PatientNotFoundException e) {
+                // catch the exception when the patient is not found
+                model.addAttribute("errorMessage", "Patient not found");
+                return "error_page";
+                    }
     }
-
     @GetMapping("/patient/delete/{patientId}")
     public String deletPatient(@PathVariable("patientId") Long patientId){
+        try{
          patientService.deletePatientById(patientId);
-         return "success1";
+         return "success1";}
+        catch (PatientNotFoundException e) {
+            // catch exception when the patient is not found
+            return "error_page";
+        }
     }
 
     @GetMapping("/patient/search")
