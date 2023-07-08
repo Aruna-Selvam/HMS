@@ -10651,3 +10651,135 @@ Caused by: java.lang.IllegalStateException: Failed to replace DataSource with an
 2023-07-07 17:23:22.084 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-07-07 17:23:22.086 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2023-07-07 17:23:22.101 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 18:40:29.542 INFO  c.p.H.s.ScheduleAppointmentServiceImplTest - Starting ScheduleAppointmentServiceImplTest using Java 11.0.16.1 on Yashwanth with PID 11408 (started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 18:40:29.543 DEBUG c.p.H.s.ScheduleAppointmentServiceImplTest - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 18:40:29.544 INFO  c.p.H.s.ScheduleAppointmentServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 18:40:30.740 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 18:40:30.837 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 3 JPA repository interfaces.
+2023-07-07 18:40:31.902 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 18:40:32.028 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 18:40:32.356 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 18:40:32.849 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 18:40:33.607 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 18:40:33.646 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 18:40:35.199 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 18:40:35.220 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 18:40:36.585 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 18:40:37.620 INFO  c.p.H.s.ScheduleAppointmentServiceImplTest - Started ScheduleAppointmentServiceImplTest in 8.877 seconds (JVM running for 11.448)
+2023-07-07 18:40:38.013 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 18:40:38.018 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 18:40:38.037 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 18:42:25.541 INFO  c.p.H.s.ScheduleAppointmentServiceImplTest - Starting ScheduleAppointmentServiceImplTest using Java 11.0.16.1 on Yashwanth with PID 24696 (started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 18:42:25.543 DEBUG c.p.H.s.ScheduleAppointmentServiceImplTest - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 18:42:25.544 INFO  c.p.H.s.ScheduleAppointmentServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 18:42:26.552 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 18:42:26.646 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 3 JPA repository interfaces.
+2023-07-07 18:42:27.535 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 18:42:27.614 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 18:42:27.854 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 18:42:28.405 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 18:42:28.920 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 18:42:28.953 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 18:42:30.290 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 18:42:30.311 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 18:42:31.599 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 18:42:32.615 INFO  c.p.H.s.ScheduleAppointmentServiceImplTest - Started ScheduleAppointmentServiceImplTest in 7.749 seconds (JVM running for 9.947)
+2023-07-07 18:42:33.025 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 18:42:33.029 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 18:42:33.051 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 19:54:29.796 INFO  c.p.H.service.PatientServiceImplTest - Starting PatientServiceImplTest using Java 11.0.16.1 on Yashwanth with PID 26756 (started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 19:54:29.798 DEBUG c.p.H.service.PatientServiceImplTest - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 19:54:29.798 INFO  c.p.H.service.PatientServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 19:54:30.788 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 19:54:30.871 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+2023-07-07 19:54:31.791 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 19:54:31.872 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 19:54:32.188 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 19:54:32.684 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 19:54:33.233 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 19:54:33.257 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 19:54:34.607 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 19:54:34.630 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 19:54:35.927 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 19:54:36.979 INFO  c.p.H.service.PatientServiceImplTest - Started PatientServiceImplTest in 7.815 seconds (JVM running for 10.034)
+2023-07-07 19:54:37.398 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 19:54:37.401 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 19:54:37.422 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 19:55:10.034 INFO  c.p.H.service.PatientServiceImplTest - Starting PatientServiceImplTest using Java 11.0.16.1 on Yashwanth with PID 28432 (started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 19:55:10.036 DEBUG c.p.H.service.PatientServiceImplTest - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 19:55:10.037 INFO  c.p.H.service.PatientServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 19:55:11.045 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 19:55:11.141 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2023-07-07 19:55:11.983 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 19:55:12.064 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 19:55:12.295 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 19:55:12.777 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 19:55:13.345 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 19:55:13.366 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 19:55:14.621 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 19:55:14.638 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 19:55:15.874 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 19:55:16.917 INFO  c.p.H.service.PatientServiceImplTest - Started PatientServiceImplTest in 7.489 seconds (JVM running for 9.676)
+2023-07-07 19:55:17.387 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 19:55:17.389 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 19:55:17.407 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 19:59:36.646 INFO  c.p.H.s.ScheduleAppointmentServiceImplTest - Starting ScheduleAppointmentServiceImplTest using Java 11.0.16.1 on Yashwanth with PID 8648 (started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 19:59:36.649 DEBUG c.p.H.s.ScheduleAppointmentServiceImplTest - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 19:59:36.650 INFO  c.p.H.s.ScheduleAppointmentServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 19:59:37.569 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 19:59:37.674 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 3 JPA repository interfaces.
+2023-07-07 19:59:38.546 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 19:59:38.620 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 19:59:38.690 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 19:59:39.080 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 19:59:39.576 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 19:59:39.607 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 19:59:40.743 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 19:59:40.771 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 19:59:42.079 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 19:59:43.067 INFO  c.p.H.s.ScheduleAppointmentServiceImplTest - Started ScheduleAppointmentServiceImplTest in 6.984 seconds (JVM running for 9.975)
+2023-07-07 19:59:43.242 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.perscholas.HospitalManagementSystem.service.PatientServiceImplTest], using SpringBootContextLoader
+2023-07-07 19:59:43.243 INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.perscholas.HospitalManagementSystem.service.PatientServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-07-07 19:59:43.243 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.perscholas.HospitalManagementSystem.service.PatientServiceImplTest]: PatientServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-07-07 19:59:43.245 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.perscholas.HospitalManagementSystem.HospitalManagementSystemApplication for test class com.perscholas.HospitalManagementSystem.service.PatientServiceImplTest
+2023-07-07 19:59:43.247 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-07-07 19:59:43.248 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@16a7af5d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@207358ad, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3e2ee637, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@62d818c6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@492e9e87, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7322013f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3a744e32, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@18487f92, org.springframework.test.context.event.EventPublishingTestExecutionListener@252f00ba, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4667c6d9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5efa05f9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@515555b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@58e2af93, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@204beb58, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2e10f765]
+2023-07-07 19:59:43.378 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 19:59:43.381 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 19:59:43.398 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 20:08:41.652 INFO  c.p.H.service.PatientServiceImplTest - Starting PatientServiceImplTest using Java 11.0.16.1 on Yashwanth with PID 17192 (started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 20:08:41.654 DEBUG c.p.H.service.PatientServiceImplTest - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 20:08:41.655 INFO  c.p.H.service.PatientServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 20:08:42.626 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 20:08:42.713 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 3 JPA repository interfaces.
+2023-07-07 20:08:43.607 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 20:08:43.681 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 20:08:43.974 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 20:08:44.507 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 20:08:45.010 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 20:08:45.035 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 20:08:46.335 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 20:08:46.360 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 20:08:47.676 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 20:08:48.738 INFO  c.p.H.service.PatientServiceImplTest - Started PatientServiceImplTest in 7.707 seconds (JVM running for 9.865)
+2023-07-07 20:08:49.183 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 20:08:49.185 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 20:08:49.204 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-07 20:11:07.760 INFO  c.p.H.s.ScheduleAppointmentServiceImplTest - Starting ScheduleAppointmentServiceImplTest using Java 11.0.16.1 on Yashwanth with PID 24416 (started by lokes in C:\Aruna\PerScholas\HospitalManagementSystem)
+2023-07-07 20:11:07.762 DEBUG c.p.H.s.ScheduleAppointmentServiceImplTest - Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-07-07 20:11:07.763 INFO  c.p.H.s.ScheduleAppointmentServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-07-07 20:11:08.730 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-07 20:11:08.832 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
+2023-07-07 20:11:09.699 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-07 20:11:09.794 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-07-07 20:11:10.057 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-07-07 20:11:10.579 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-07 20:11:11.069 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-07 20:11:11.098 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2023-07-07 20:11:12.430 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-07 20:11:12.447 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 20:11:13.673 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-07 20:11:14.717 INFO  c.p.H.s.ScheduleAppointmentServiceImplTest - Started ScheduleAppointmentServiceImplTest in 7.587 seconds (JVM running for 9.804)
+2023-07-07 20:11:15.125 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-07 20:11:15.128 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-07 20:11:15.149 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
