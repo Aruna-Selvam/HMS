@@ -1,7 +1,9 @@
 package com.perscholas.HospitalManagementSystem.Entity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
@@ -9,6 +11,8 @@ import java.util.List;
 @Data
 @Entity
 @NoArgsConstructor
+@ToString
+@EqualsAndHashCode
 public class Doctor {
 
     @Id

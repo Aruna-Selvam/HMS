@@ -1,6 +1,5 @@
 package com.perscholas.HospitalManagementSystem.Service;
 
-import com.perscholas.HospitalManagementSystem.Entity.Patient;
 import com.perscholas.HospitalManagementSystem.Entity.ScheduleAppointment;
 import com.perscholas.HospitalManagementSystem.Repository.ScheduleAppointmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,8 +33,21 @@ public class ScheduleAppointmentServiceImpl implements ScheduleAppointmentServic
         return scheduleAppointmentRepository.findById(appointmentId).orElse(null);
     }
 
+
+
     @Override
-    public void updateSchedule(ScheduleAppointment scheduleAppointment) {
-        scheduleAppointmentRepository.save(scheduleAppointment);
+    public void updateSchedule(Long appointmentId, ScheduleAppointment scheduleAppointment) {
+        ScheduleAppointment existingAppointment = scheduleAppointmentRepository.findById(appointmentId)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid appointment ID: " + appointmentId));
+
+        existingAppointment.setPatientName(scheduleAppointment.getPatientName());
+        existingAppointment.setPatientPhoneNumber(scheduleAppointment.getPatientPhoneNumber());
+        existingAppointment.setEMail(scheduleAppointment.getEMail());
+        existingAppointment.setDateOfBirth(scheduleAppointment.getDateOfBirth());
+        existingAppointment.setDoctorName(scheduleAppointment.getDoctorName());
+        existingAppointment.setAppointmentDate(scheduleAppointment.getAppointmentDate());
+        existingAppointment.setAppointmentTime(scheduleAppointment.getAppointmentTime());
+        scheduleAppointmentRepository.save(existingAppointment);
+
     }
 }

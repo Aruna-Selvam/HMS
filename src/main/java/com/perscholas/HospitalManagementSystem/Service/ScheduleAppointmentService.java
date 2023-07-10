@@ -15,5 +15,5 @@ public interface ScheduleAppointmentService {
 
     ScheduleAppointment getScheduleById(Long appointmentId);
 
-    void updateSchedule(ScheduleAppointment scheduleAppointment);
+    void updateSchedule(Long appointmentId, ScheduleAppointment scheduleAppointment);
 }
