@@ -6,6 +6,7 @@ import com.perscholas.HospitalManagementSystem.Entity.ScheduleAppointment;
 import com.perscholas.HospitalManagementSystem.Exception.AppointmentTimeAlreadyExistsException;
 import com.perscholas.HospitalManagementSystem.Repository.DoctorRepository;
 import com.perscholas.HospitalManagementSystem.Repository.ScheduleAppointmentRepository;
+import com.perscholas.HospitalManagementSystem.Service.DoctorService;
 import com.perscholas.HospitalManagementSystem.Service.EmailService;
 import com.perscholas.HospitalManagementSystem.Service.EmailServiceImpl;
 import com.perscholas.HospitalManagementSystem.Service.ScheduleAppointmentService;
@@ -30,7 +31,8 @@ public class ScheduleAppointmentController {
     private ScheduleAppointmentRepository scheduleAppointmentRepository;
     @Autowired
     private EmailService emailService;
-
+    @Autowired
+    private DoctorService doctorService;
     @Autowired
     private EmailServiceImpl emailServiceImpl;
     @GetMapping("/app")
@@ -60,30 +62,33 @@ public class ScheduleAppointmentController {
                         scheduleAppointment.getAppointmentDate() +" . ");
         return "schedule_success";}
     }
-    @GetMapping("/schedule/")
+    @GetMapping("/schedule/update")
     public String getScheduleByAppointmentId(@RequestParam("appointmentId")  Long appointmentId, Model model)
     {
-        ScheduleAppointment scheduleAppointment=new ScheduleAppointment();
+        ScheduleAppointment scheduleAppointment1=new ScheduleAppointment();
         try{
-        ScheduleAppointment scheduleAppointment1=scheduleAppointmentService.getScheduleById(appointmentId);
+        ScheduleAppointment scheduleAppointment=scheduleAppointmentService.getScheduleById(appointmentId);
+            List<Doctor> doctors = doctorService.getAllDoctors();
         model.addAttribute("scheduleAppointment",scheduleAppointment);
+            model.addAttribute("appointmentId", appointmentId);
+            model.addAttribute("doctors", doctors);
         return "update_schedule";}
         catch (RuntimeException e) {
             model.addAttribute("errorMessage", "Schedule appointment not found");
             return "error_page";
         }
     }
-    @PostMapping("/schedule/update")
-    public String updateSchedule(@ModelAttribute("scheduleAppointment") ScheduleAppointment scheduleAppointment, Model model) {
+    @PostMapping("/schedule/update/{appointmentId}")
+    public String updateSchedule(@PathVariable("appointmentId") Long appointmentId, @ModelAttribute("scheduleAppointment") ScheduleAppointment scheduleAppointment, Model model) {
         try{
         //Update the schedule using scheduleAppointmentService
-        scheduleAppointmentService.updateSchedule(scheduleAppointment);
+        scheduleAppointmentService.updateSchedule(appointmentId,scheduleAppointment);
 
         // Add a success message to the model to be displayed on the update_schedule view
-        model.addAttribute("successMessage", "Schedule updated successfully!");
+           model.addAttribute("successMessage", "Schedule updated successfully!");
 
         // Redirect to a relevant page or return the update_schedule view
-        return "redirect:/schedule/";}
+        return "sc_success";}
         catch (RuntimeException e) {
             // Handle the exception and display an error message
             model.addAttribute("errorMessage", "Failed to update the schedule");

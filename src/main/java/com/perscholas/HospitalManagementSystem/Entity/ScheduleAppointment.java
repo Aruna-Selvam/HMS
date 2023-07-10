@@ -30,9 +30,6 @@ public class ScheduleAppointment {
     @NotNull
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateOfBirth;
-
-//    @Column(name="doctor_id")
-//    private Long doctorId;
     @NotNull
     private String doctorName;
     @NotNull
