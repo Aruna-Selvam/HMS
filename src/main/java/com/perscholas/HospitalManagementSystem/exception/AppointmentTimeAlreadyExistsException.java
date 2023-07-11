@@ -1,4 +1,4 @@
-package com.perscholas.HospitalManagementSystem.Exception;
+package com.perscholas.HospitalManagementSystem.exception;
 
 public class AppointmentTimeAlreadyExistsException extends RuntimeException{
     public AppointmentTimeAlreadyExistsException() {

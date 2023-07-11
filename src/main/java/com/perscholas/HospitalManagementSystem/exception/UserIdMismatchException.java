@@ -1,4 +1,4 @@
-package com.perscholas.HospitalManagementSystem.Exception;
+package com.perscholas.HospitalManagementSystem.exception;
 
 public class UserIdMismatchException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package com.perscholas.HospitalManagementSystem.Exception;
+package com.perscholas.HospitalManagementSystem.exception;
 
 public class NoPatientsFoundException extends RuntimeException{
     public NoPatientsFoundException(String message) {

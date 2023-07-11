@@ -1,7 +1,7 @@
 package com.perscholas.HospitalManagementSystem.security;
 import org.springframework.security.core.userdetails.User;
 //import com.perscholas.HospitalManagementSystem.Entity.User;
-import com.perscholas.HospitalManagementSystem.Repository.UserRepository;
+import com.perscholas.HospitalManagementSystem.repository.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

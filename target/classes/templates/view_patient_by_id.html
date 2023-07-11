@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>View Patient</title>
+  <script>
+    function goBack() {
+        window.history.back();
+    }
+  </script>
   <!-- Add your CSS styling here -->
 </head>
 <body>
@@ -11,6 +16,7 @@
   <label for="patientId">Patient ID:</label>
   <input  type="text" id="patientId" name="patientId" >
   <button type="submit">View</button>
+  <button  class="btn btn-primary" role="button" onclick="goBack()">Go Back</button>
 </form>
 
 </body>

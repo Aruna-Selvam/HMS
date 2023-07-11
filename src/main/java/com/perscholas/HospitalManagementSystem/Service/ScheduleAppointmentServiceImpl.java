@@ -1,7 +1,7 @@
 package com.perscholas.HospitalManagementSystem.Service;
 
 import com.perscholas.HospitalManagementSystem.Entity.ScheduleAppointment;
-import com.perscholas.HospitalManagementSystem.Repository.ScheduleAppointmentRepository;
+import com.perscholas.HospitalManagementSystem.repository.ScheduleAppointmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

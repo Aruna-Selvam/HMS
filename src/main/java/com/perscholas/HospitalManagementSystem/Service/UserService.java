@@ -2,10 +2,10 @@ package com.perscholas.HospitalManagementSystem.Service;
 
 import com.perscholas.HospitalManagementSystem.Entity.Role;
 import com.perscholas.HospitalManagementSystem.Entity.User;
-import com.perscholas.HospitalManagementSystem.Exception.DataNotFoundException;
-import com.perscholas.HospitalManagementSystem.Exception.UserIdMismatchException;
-import com.perscholas.HospitalManagementSystem.Repository.RoleRepository;
-import com.perscholas.HospitalManagementSystem.Repository.UserRepository;
+import com.perscholas.HospitalManagementSystem.exception.DataNotFoundException;
+import com.perscholas.HospitalManagementSystem.exception.UserIdMismatchException;
+import com.perscholas.HospitalManagementSystem.repository.RoleRepository;
+import com.perscholas.HospitalManagementSystem.repository.UserRepository;
 import com.perscholas.HospitalManagementSystem.dto.UserDto;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -41,7 +41,7 @@ public class UserService {
         user.setRoles(Arrays.asList(role));
         return userRepository.save(user);
     }
-    private Role checkRoleExist() {
+    public Role checkRoleExist() {
         Role role = new Role();
         role.setName("ROLE_USER");
         return roleRepository.save(role);

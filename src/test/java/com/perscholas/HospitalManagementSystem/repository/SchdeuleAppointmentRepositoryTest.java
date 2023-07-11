@@ -3,7 +3,6 @@ package com.perscholas.HospitalManagementSystem.repository;
 import com.perscholas.HospitalManagementSystem.Entity.Doctor;
 import com.perscholas.HospitalManagementSystem.Entity.Patient;
 import com.perscholas.HospitalManagementSystem.Entity.ScheduleAppointment;
-import com.perscholas.HospitalManagementSystem.Repository.ScheduleAppointmentRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

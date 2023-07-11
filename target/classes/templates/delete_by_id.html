@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Edit Patient</title>
+  <script>
+    function goBack() {
+        window.history.back();
+    }
+  </script>
   <!-- Add your CSS styling here -->
 </head>
 <body>
@@ -12,6 +17,6 @@
   <input  type="text" id="patientId" name="patientId" >
   <button type="submit">Delete</button>
 </form>
-
+<button  class="btn btn-primary" role="button" onclick="goBack()">Go Back</button>
 </body>
 </html>

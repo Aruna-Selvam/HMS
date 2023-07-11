@@ -4,7 +4,6 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 import com.perscholas.HospitalManagementSystem.Entity.Patient;
-import com.perscholas.HospitalManagementSystem.Repository.PatientRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;

@@ -1,4 +1,4 @@
-package com.perscholas.HospitalManagementSystem.Repository;
+package com.perscholas.HospitalManagementSystem.repository;
 
 import com.perscholas.HospitalManagementSystem.Entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
