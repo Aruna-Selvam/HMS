@@ -1,10 +1,10 @@
 package com.perscholas.HospitalManagementSystem.Service;
 
-import com.perscholas.HospitalManagementSystem.Entity.Patient;
 import com.perscholas.HospitalManagementSystem.Entity.ScheduleAppointment;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 public interface ScheduleAppointmentService {
     void saveAppointment(ScheduleAppointment scheduleAppointment);
@@ -16,4 +16,6 @@ public interface ScheduleAppointmentService {
     ScheduleAppointment getScheduleById(Long appointmentId);
 
     void updateSchedule(Long appointmentId, ScheduleAppointment scheduleAppointment);
+
+    Optional<ScheduleAppointment> findByAppointmentId(Long id);
 }

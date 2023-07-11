@@ -11,4 +11,28 @@ public class Department {
     private String departmentName;
     @OneToMany(mappedBy = "department")
     private List<Doctor> doctors;
+
+    public long getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(long departmentId) {
+        this.departmentId = departmentId;
+    }
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
+
+    public List<Doctor> getDoctors() {
+        return doctors;
+    }
+
+    public void setDoctors(List<Doctor> doctors) {
+        this.doctors = doctors;
+    }
 }

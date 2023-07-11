@@ -41,12 +41,9 @@
                 <input type="date" th:field="*{dateOfBirth}"name="date" id="dateOfBirth" class="formbold-form-input" />
               </div>
               <div class="formbold-mb-5 w-full">
-                <!--          <label for="docName"  class="formbold-form-label"> Doctor Name</label>-->
-                <!--          <input type="text" th:field="*{doctorName}" name="doName" id="docName" class="formbold-form-input" />-->
+
                 <label for="doctor" class="formbold-form-label">Select Doctor:</label>
-<!--                <select id="doctor" name="doctor"  th:field="*{doctorName}" class="large-select">-->
-<!--                  <option th:each="doctor : ${doctors}"  th:value="${doctor.doctorName}" th:text="${doctor.doctorName}"></option>-->
-<!--                </select>-->
+<
                 <select id="doctor" name="doctor" th:field="*{doctorName}" class="large-select">
                   <option th:each="doctor : ${doctors}" th:value="${doctor.doctorName}"
                           th:text="${doctor.doctorName}" th:selected="${doctor.doctorName == scheduleAppointment.doctorName}"></option>

@@ -5,8 +5,18 @@
   <meta charset="UTF-8">
   <title>Patients</title>
   <link rel="stylesheet" th:href="@{/CSS/view_patient.css}" >
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  <link rel="stylesheet" th:href="@{/CSS/home.css}" >
 
-  <!-- Add your CSS styling here -->
+  <script th:src="@{https://code.jquery.com/jquery-3.6.0.min.js}" ></script>
+  <script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+  <script th:src="@{https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js}"></script>
+  <link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" th:src="@{bootstrap/js/bootstrap.min.js}"></script>
+  <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js}" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
   <script async>
  function confirmDelete(patientId) {
       event.preventDefault();
@@ -20,6 +30,30 @@
 </script>
 </head>
 <body>
+<section id="header">
+  <nav class="nav fixed-top">
+    <i class="uil uil-bars navOpenBtn"></i>
+    <img src="../Images/logo hos.jpg" width="100" height="50">
+    <p><h5 id="yash" style="color:blue;">Yash Group of Hospitals</h5></p>
+    <ul class="nav-links" id="navbar">
+      <i class="uil uil-times navCloseBtn"></i>
+
+      <a href="#" th:href="@{/home}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
+
+      <!--            <a th:href="@{/service}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Service</a>-->
+      <a th:href="@{/app}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Schedule Appointment</a>
+
+      <a th:href="@{/patient}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Patient </a>
+      <a th:href="@{/admin/admin}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Admin</a>
+      <a th:href="@{/about}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">About Us</a>
+      <a th:href="@{/logout}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">LogOut</a>
+
+    </ul>
+
+
+  </nav>
+</section>
+<section class="p1">
 <h1>Patients</h1>
 
 <table>
@@ -61,6 +95,7 @@
   </tr>
   </tbody>
 </table>
+</section>
 <a th:href="@{/patient/form}" class="btn btn-primary">Add Patient</a>
 <button  class="btn btn-primary" role="button" onclick="goBack()">Go Back</button>
 

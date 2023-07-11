@@ -17,4 +17,6 @@ public interface PatientRepository extends JpaRepository<Patient,Long> {
         "OR lower(p.address) LIKE %:searchText% " +
         "OR lower(p.patientId) LIKE %:searchText%")
 List<Patient> findByNameContainingIgnoreCase(String searchText);
+    @Query("SELECT COUNT(p) FROM Patient p")
+    int countAllPatients();
 }

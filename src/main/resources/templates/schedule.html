@@ -20,12 +20,11 @@
       <ul class="nav-links" id="navbar">
         <i class="uil uil-times navCloseBtn"></i>
 
-        <a th:href="@{/}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
-
-        <a th:href="@{/service}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Service</a>
+        <a th:href="@{/home}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
         <a th:href="@{/schedule}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Schedule Appointment</a>
-        <a th:href="@{/about}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">About Us</a>
+        <a th:href="@{/admin/admin}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Admin</a>
         <a th:href="@{/patient}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Patient </a>
+        <a th:href="@{/about}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">About Us</a>
         <a th:href="@{/login}" class=" btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
       </ul>
 
@@ -122,11 +121,17 @@
       <div id="cancelAppointmentForm" class="form-wrapper" style="display: none;">
         <h1>Cancel Appointment</h1>
         <!-- Form content -->
+        <form action="#" th:action="@{/schedule/delete }"  th:object="${scheduleAppointment}"method="get">
+
+          <label for="appointmentId">Appointment ID:</label>
+          <input  type="text" id="appointmentId1" name="appointmentId" >
+          <button type="submit">Cancel Appointment</button>
+        </form>
       </div>
     </div>
   </div>
 
-  <!-- Footer content -->
+
 
   <script>
       // Get the buttons and forms
