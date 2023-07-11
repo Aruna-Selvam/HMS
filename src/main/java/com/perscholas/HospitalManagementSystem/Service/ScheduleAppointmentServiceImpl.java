@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ScheduleAppointmentServiceImpl implements ScheduleAppointmentService{
@@ -49,5 +50,10 @@ public class ScheduleAppointmentServiceImpl implements ScheduleAppointmentServic
         existingAppointment.setAppointmentTime(scheduleAppointment.getAppointmentTime());
         scheduleAppointmentRepository.save(existingAppointment);
 
+    }
+
+    @Override
+    public Optional<ScheduleAppointment> findByAppointmentId(Long id) {
+       return scheduleAppointmentRepository.findById(id);
     }
 }

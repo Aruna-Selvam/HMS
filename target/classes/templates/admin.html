@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Admin Page</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"/>
+  <link rel="stylesheet" th:href="@{/CSS/home.css}" >
+
+  <script th:src="@{https://code.jquery.com/jquery-3.6.0.min.js}" ></script>
+  <script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+  <script th:src="@{https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js}"></script>
+  <link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" th:src="@{bootstrap/js/bootstrap.min.js}"></script>
+  <link th:href="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js}" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<section id="header">
+  <nav class="nav fixed-top">
+    <i class="uil uil-bars navOpenBtn"></i>
+    <img src="../Images/logo hos.jpg" width="100" height="50">
+    <p><h5 id="yash" style="color:blue;">Yash Group of Hospitals</h5></p>
+    <ul class="nav-links" id="navbar">
+      <i class="uil uil-times navCloseBtn"></i>
+
+      <a th:href="@{/home}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Home</a>
+
+      <!--            <a th:href="@{/service}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Service</a>-->
+      <a th:href="@{/app}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Schedule Appointment</a>
+
+      <a th:href="@{/patient}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Patient </a>
+      <a th:href="@{/admin/admin}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Admin</a>
+      <a th:href="@{/about}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">About Us</a>
+      <a th:href="@{/logout}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">LogOut</a>
+      <!--            <a th:href="@{/login}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>-->
+    </ul>
+
+
+  </nav>
+</section>
+<section class="tp">
+<h1>Welcome, Admin!</h1>
+<div>
+  <h3>Statistics:</h3>
+  <p>Total No. Of Patients: <span id="totalPatients"></span></p>
+  <p>Total No. Of Schedule Appointments: <span id="totalAppointments"></span></p>
+  <p>Total No. Of Doctors: <span id="totalDoctors"></span></p>
+  <button id="fetchStatisticsButton">Fetch Statistics</button>
+</div>
+</section>
+<script>
+        // Attach click event handler to the fetchStatisticsButton
+        $("#fetchStatisticsButton").click(function() {
+            fetchStatistics();
+        });
+
+        function fetchStatistics() {
+            $.ajax({
+                url: "/admin/statistics",
+                method: "GET",
+                success: function(data) {
+                    $("#totalPatients").text(data.totalPatients);
+                    $("#totalAppointments").text(data.totalAppointments);
+                    $("#totalDoctors").text(data.totalDoctors);
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error fetching statistics:", error);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

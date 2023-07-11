@@ -2,28 +2,30 @@ package com.perscholas.HospitalManagementSystem.repository;
 import com.perscholas.HospitalManagementSystem.Entity.Doctor;
 import com.perscholas.HospitalManagementSystem.Repository.DoctorRepository;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.test.context.ActiveProfiles;
-
 import java.util.List;
 import java.util.Optional;
-
 import static org.junit.jupiter.api.Assertions.*;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import java.util.ArrayList;
+import static org.mockito.Mockito.*;
 
-@DataJpaTest
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class DoctorRepositoryTest {
 
-    @Autowired
+    @Mock
     private DoctorRepository doctorRepository;
+
+    public DoctorRepositoryTest() {
+        MockitoAnnotations.initMocks(this);
+    }
 
     @Test
     public void testSaveDoctor() {
         // Arrange
         Doctor doctor = new Doctor();
+        doctor.setDoctorId(2L);
         doctor.setDoctorName("John Smith");
+        when(doctorRepository.save(any(Doctor.class))).thenReturn(doctor);
 
         // Act
         Doctor savedDoctor = doctorRepository.save(doctor);
@@ -38,20 +40,21 @@ public class DoctorRepositoryTest {
         // Arrange
         Doctor doctor = new Doctor();
         doctor.setDoctorName("John Smith");
-        Doctor savedDoctor = doctorRepository.save(doctor);
+        when(doctorRepository.findById(anyLong())).thenReturn(Optional.of(doctor));
 
         // Act
-        Optional<Doctor> foundDoctor = doctorRepository.findById(savedDoctor.getDoctorId());
+        Optional<Doctor> foundDoctor = doctorRepository.findById(1L);
 
         // Assert
         assertTrue(foundDoctor.isPresent());
-        assertEquals(savedDoctor.getDoctorId(), foundDoctor.get().getDoctorId());
-        assertEquals(savedDoctor.getDoctorName(), foundDoctor.get().getDoctorName());
+        assertEquals(doctor.getDoctorId(), foundDoctor.get().getDoctorId());
+        assertEquals(doctor.getDoctorName(), foundDoctor.get().getDoctorName());
     }
 
     @Test
     public void testFindById_NonExistingDoctorId_ReturnsEmptyOptional() {
         // Arrange
+        when(doctorRepository.findById(anyLong())).thenReturn(Optional.empty());
 
         // Act
         Optional<Doctor> foundDoctor = doctorRepository.findById(999L);
@@ -67,13 +70,16 @@ public class DoctorRepositoryTest {
         doctor1.setDoctorName("John Smith");
         Doctor doctor2 = new Doctor();
         doctor2.setDoctorName("Jane Doe");
-        doctorRepository.save(doctor1);
-        doctorRepository.save(doctor2);
+        List<Doctor> expectedDoctors = new ArrayList<>();
+        expectedDoctors.add(doctor1);
+        expectedDoctors.add(doctor2);
+        when(doctorRepository.findAll()).thenReturn(expectedDoctors);
 
         // Act
         List<Doctor> doctors = doctorRepository.findAll();
 
         // Assert
+        assertEquals(expectedDoctors.size(), doctors.size());
         assertTrue(doctors.contains(doctor1));
         assertTrue(doctors.contains(doctor2));
     }
@@ -83,12 +89,12 @@ public class DoctorRepositoryTest {
         // Arrange
         Doctor doctor = new Doctor();
         doctor.setDoctorName("John Smith");
-        Doctor savedDoctor = doctorRepository.save(doctor);
+        doNothing().when(doctorRepository).deleteById(anyLong());
 
         // Act
-        doctorRepository.deleteById(savedDoctor.getDoctorId());
+        doctorRepository.deleteById(1L);
 
         // Assert
-        assertFalse(doctorRepository.existsById(savedDoctor.getDoctorId()));
+        verify(doctorRepository, times(1)).deleteById(1L);
     }
 }

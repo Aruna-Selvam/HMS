@@ -20,5 +20,6 @@ public interface ScheduleAppointmentRepository extends JpaRepository<ScheduleApp
 
     List<ScheduleAppointment> findByAppointmentDate(LocalDate today);
 
-
+    @Query("SELECT COUNT(sa) FROM ScheduleAppointment sa")
+    int countAllAppointments();
 }

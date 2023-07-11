@@ -21,12 +21,23 @@ public class Doctor {
     private String doctorName;
     private String specialization;
     private String phoneNumber;
+
+
     private String email;
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
     @OneToMany(mappedBy = "doctor")
     private List<ScheduleAppointment> appointments;
+    public Doctor(Long doctorId, String doctorName, String specialization, String phoneNumber, String email, Department department, List<ScheduleAppointment> appointments) {
+        this.doctorId = doctorId;
+        this.doctorName = doctorName;
+        this.specialization = specialization;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.department = department;
+        this.appointments = appointments;
+    }
 
     public Doctor(String s, String cardiology) {
     }

@@ -61,6 +61,13 @@ public class PatientController {
         model.addAttribute("patients", patients);
         return "view_patient_details";
     }
+    @GetMapping("/patient/deleteById")
+    public String deletePatientById(Model model) {
+        Patient patient=new Patient();
+        model.addAttribute("patient", patient);
+        return "delete_by_id";
+
+    }
     @GetMapping("patient/patientById")
     public String getPatientById(Model model) {
         Patient patient = new Patient();
@@ -100,13 +107,13 @@ public ResponseEntity<ByteArrayResource> downloadFile(@PathVariable("patientId")
 
             // Process the extracted text as needed
             System.out.println(text);
-
+            String sanitizedFilename = text.replaceAll("[\r\n]+", "");
             // Create a ByteArrayResource with the file data to return as the response
             ByteArrayResource resource = new ByteArrayResource(fileData);
 
             // Setting the appropriate response headers
             HttpHeaders headers = new HttpHeaders();
-            headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=\"" + text + ".pdf\"");
+            headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=\"" + sanitizedFilename + ".pdf\"");
 
             return ResponseEntity.ok()
                     .headers(headers)
@@ -170,6 +177,21 @@ public ResponseEntity<ByteArrayResource> downloadFile(@PathVariable("patientId")
                 model.addAttribute("errorMessage", "Patient not found");
                 return "error_page";
                     }
+    }
+    @GetMapping("/patient/delete/delete_by_id")
+    public String deletePatientFormById(@RequestParam("patientId") Long patientId, Model model) {
+        try {
+            // Fetch the existing patient from the database
+//            Patient patient = patientService.getPatientById(patientId);
+
+            patientRepository.deleteById(patientId);
+            // Return the view name for the patient update form
+            return "delete_success";
+        } catch (PatientNotFoundException e) {
+            // Catch the exception when the patient is not found
+            model.addAttribute("errorMessage", "Patient not found");
+            return "error_page";
+        }
     }
     @GetMapping("/patient/edit/update_by_id")
     public String showUpdatePatientFormById(@RequestParam("patientId") Long patientId, Model model) {

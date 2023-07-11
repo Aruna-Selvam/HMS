@@ -38,4 +38,18 @@ public class GlobalExceptionHandler {
         modelAndView.addObject("errorMessage", "An error occurred: " + e.getMessage());
         return modelAndView;
     }
+    @ExceptionHandler(DataNotFoundException.class)
+    public ModelAndView handleDataNotFoundException(PatientNotFoundException e, Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("error_page");
+        modelAndView.addObject("errorMessage", "An error occurred: " + e.getMessage());
+        return modelAndView;
+    }
+    @ExceptionHandler(UserIdMismatchException.class)
+    public ModelAndView userIdMismatchException(PatientNotFoundException e, Model model) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("error_page");
+        modelAndView.addObject("errorMessage", "An error occurred: " + e.getMessage());
+        return modelAndView;
+    }
 }

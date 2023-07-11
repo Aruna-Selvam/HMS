@@ -96,6 +96,13 @@ public class ScheduleAppointmentController {
             // Redirect to an error page or return an error view
             return "error_page";}
     }
+    @GetMapping("/schedule/delete")
+    public String deletePatientById(Model model, Long appointmentId) {
+        Patient patient=new Patient();
+        scheduleAppointmentRepository.deleteById(appointmentId);
+        return "sche_success";
+
+    }
     @Scheduled(cron = "0 0 10 * * ?") // Run the reminder task every day at 10:00 PM
     private void sendReminderEmails() {
         LocalDate currentDate = LocalDate.now();
