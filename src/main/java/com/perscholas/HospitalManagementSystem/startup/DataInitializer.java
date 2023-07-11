@@ -2,14 +2,18 @@ package com.perscholas.HospitalManagementSystem.startup;
 
 import com.perscholas.HospitalManagementSystem.Entity.Department;
 import com.perscholas.HospitalManagementSystem.Entity.Doctor;
-import com.perscholas.HospitalManagementSystem.Repository.DepartmentRepository;
-import com.perscholas.HospitalManagementSystem.Repository.DoctorRepository;
+import com.perscholas.HospitalManagementSystem.Entity.Patient;
+import com.perscholas.HospitalManagementSystem.repository.DepartmentRepository;
+import com.perscholas.HospitalManagementSystem.repository.DoctorRepository;
+import com.perscholas.HospitalManagementSystem.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Component
@@ -18,10 +22,14 @@ public class DataInitializer implements ApplicationListener<ApplicationReadyEven
     private final DoctorRepository doctorRepository;
     private final DepartmentRepository departmentRepository;
 
+
+
+
     @Autowired
-    public DataInitializer(DoctorRepository doctorRepository, DepartmentRepository departmentRepository) {
+    public DataInitializer(DoctorRepository doctorRepository, DepartmentRepository departmentRepository, PatientRepository patientRepository) {
         this.doctorRepository = doctorRepository;
         this.departmentRepository = departmentRepository;
+
     }
 
     @Override
@@ -71,6 +79,9 @@ public class DataInitializer implements ApplicationListener<ApplicationReadyEven
 
             // Save doctors to the database
             doctorRepository.saveAll(List.of(doctor1, doctor2, doctor3, doctor4));
+
+
+
         }
     }
 
@@ -78,5 +89,6 @@ public class DataInitializer implements ApplicationListener<ApplicationReadyEven
         // Delete all doctors and related entities
         doctorRepository.deleteAll();
         departmentRepository.deleteAll();
+
     }
 }

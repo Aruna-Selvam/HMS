@@ -7,6 +7,10 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
@@ -23,7 +27,9 @@ public class Patient {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dateOfBirth;
     private String gender;
+    @NotNull
     private String email;
+    @NotNull
     private String contactNumber;
     private String address;
     @Lob

@@ -1,9 +1,9 @@
-package com.perscholas.HospitalManagementSystem.Controller;
+package com.perscholas.HospitalManagementSystem.controller;
 
 import com.perscholas.HospitalManagementSystem.Entity.Patient;
-import com.perscholas.HospitalManagementSystem.Exception.NoPatientsFoundException;
-import com.perscholas.HospitalManagementSystem.Exception.PatientNotFoundException;
-import com.perscholas.HospitalManagementSystem.Repository.PatientRepository;
+import com.perscholas.HospitalManagementSystem.exception.NoPatientsFoundException;
+import com.perscholas.HospitalManagementSystem.exception.PatientNotFoundException;
+import com.perscholas.HospitalManagementSystem.repository.PatientRepository;
 import com.perscholas.HospitalManagementSystem.Service.PatientService;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
@@ -16,10 +16,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.List;

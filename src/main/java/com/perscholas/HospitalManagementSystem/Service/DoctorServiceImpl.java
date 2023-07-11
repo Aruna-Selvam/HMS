@@ -1,7 +1,7 @@
 package com.perscholas.HospitalManagementSystem.Service;
 
 import com.perscholas.HospitalManagementSystem.Entity.Doctor;
-import com.perscholas.HospitalManagementSystem.Repository.DoctorRepository;
+import com.perscholas.HospitalManagementSystem.repository.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

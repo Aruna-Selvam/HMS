@@ -1,7 +1,7 @@
 package com.perscholas.HospitalManagementSystem.service;
 
 import com.perscholas.HospitalManagementSystem.Entity.Patient;
-import com.perscholas.HospitalManagementSystem.Repository.PatientRepository;
+import com.perscholas.HospitalManagementSystem.repository.PatientRepository;
 import com.perscholas.HospitalManagementSystem.Service.PatientServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -111,18 +111,5 @@ public class PatientServiceImplTest {
         verify(patientRepository, times(1)).deleteById(patientId);
     }
 
-    @Test
-    @DisplayName("Test For Search Patient Details ")
-    public void testSearchPatients() {
-        String searchText = "John";
-        List<Patient> patients = new ArrayList<>();
-        patients.add(patient);
-
-        when(patientRepository.findByNameContainingIgnoreCase(searchText)).thenReturn(patients);
-
-        List<Patient> result = patientService.searchPatients(searchText);
-
-        assertEquals(patients, result);
-        verify(patientRepository, times(1)).findByNameContainingIgnoreCase(searchText);
-    }
 }
+

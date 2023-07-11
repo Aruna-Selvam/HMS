@@ -34,7 +34,13 @@ public class SecurityConfig {
                         logout -> logout
                                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                                 .logoutSuccessUrl("/login")
-                                .permitAll());
+                                .permitAll())
+                .sessionManagement(
+                        session -> session
+                                .maximumSessions(1) // Limit one session per user
+                                .maxSessionsPreventsLogin(true) // Prevent new login when maximum sessions reached
+                                .expiredUrl("/login?expired") // Redirect URL for expired sessions
+                );
         return http.build();
     }
 }

@@ -1,6 +1,5 @@
 package com.perscholas.HospitalManagementSystem.repository;
 import com.perscholas.HospitalManagementSystem.Entity.Doctor;
-import com.perscholas.HospitalManagementSystem.Repository.DoctorRepository;
 import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Optional;

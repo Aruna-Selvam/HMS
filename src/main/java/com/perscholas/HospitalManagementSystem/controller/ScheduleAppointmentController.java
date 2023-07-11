@@ -1,11 +1,11 @@
-package com.perscholas.HospitalManagementSystem.Controller;
+package com.perscholas.HospitalManagementSystem.controller;
 
 import com.perscholas.HospitalManagementSystem.Entity.Doctor;
 import com.perscholas.HospitalManagementSystem.Entity.Patient;
 import com.perscholas.HospitalManagementSystem.Entity.ScheduleAppointment;
-import com.perscholas.HospitalManagementSystem.Exception.AppointmentTimeAlreadyExistsException;
-import com.perscholas.HospitalManagementSystem.Repository.DoctorRepository;
-import com.perscholas.HospitalManagementSystem.Repository.ScheduleAppointmentRepository;
+import com.perscholas.HospitalManagementSystem.exception.AppointmentTimeAlreadyExistsException;
+import com.perscholas.HospitalManagementSystem.repository.DoctorRepository;
+import com.perscholas.HospitalManagementSystem.repository.ScheduleAppointmentRepository;
 import com.perscholas.HospitalManagementSystem.Service.DoctorService;
 import com.perscholas.HospitalManagementSystem.Service.EmailService;
 import com.perscholas.HospitalManagementSystem.Service.EmailServiceImpl;
@@ -14,11 +14,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.List;
 
 @Controller

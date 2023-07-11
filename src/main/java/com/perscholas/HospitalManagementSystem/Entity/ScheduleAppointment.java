@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
@@ -22,10 +24,14 @@ public class ScheduleAppointment {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long appointmentId;
     @NotNull
+    @NotBlank(message = "Patient Name is required")
     private String patientName;
     @NotNull
+    @NotBlank(message = "Phone number is required")
     private String patientPhoneNumber;
     @NotNull
+    @NotBlank(message = "Email is required")
+    @Email(message = "Invalid email format")
     private String eMail;
     @NotNull
     @DateTimeFormat(pattern = "yyyy-MM-dd")

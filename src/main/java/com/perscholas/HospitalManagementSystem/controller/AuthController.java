@@ -1,4 +1,4 @@
-package com.perscholas.HospitalManagementSystem.Controller;
+package com.perscholas.HospitalManagementSystem.controller;
 
 import com.perscholas.HospitalManagementSystem.Entity.User;
 import com.perscholas.HospitalManagementSystem.Service.ScheduleAppointmentService;
@@ -6,8 +6,6 @@ import com.perscholas.HospitalManagementSystem.Service.UserService;
 import com.perscholas.HospitalManagementSystem.dto.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -32,24 +30,14 @@ public class AuthController {
         this.appointmentService = appointmentService;
     }
 
-
-    @GetMapping("/account")
-    public String accountPage(Model model) {
-        model.addAttribute("page", "account.html");
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        User user = userService.findUserByEmail(authentication.getName());
-        model.addAttribute("user", user);
-        model.addAttribute("appointments", appointmentService.findByAppointmentId(user.getId()));
-        return "main";
-    }
-
+    // Handler method for displaying the registration page
     @GetMapping("/register")
     public String registerPage(Model model) {
         model.addAttribute("appName", appName);
         model.addAttribute("user", new UserDto());
         return "register";
     }
-
+    // Handler method for processing user registration
     @PostMapping("/register/save")
     public String registration(@Valid @ModelAttribute("user") UserDto userDto, BindingResult result,
                                Model model) {

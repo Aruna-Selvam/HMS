@@ -1,9 +1,8 @@
 package com.perscholas.HospitalManagementSystem.Entity;
 
 import lombok.*;
-import org.springframework.security.core.userdetails.UserDetails;
-
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,23 +21,28 @@ public class User{
     private Long id;
 
     @Column(name = "first_name")
+    @NotBlank(message = "First name is required")
     private String firstName;
 
     @Column(name = "last_name")
+    @NotBlank(message = "Last name is required")
     private String lastName;
 
     @Column(name = "email", nullable = false, unique = true)
+    @NotBlank(message = "Email is required")
+    @Email(message = "Invalid email format")
     private String email;
-
+    @NotBlank(message = "Password is required")
     @Column(name = "password")
     private String password;
 
     @Column(name = "phone_number")
     private Long phoneNumber;
-
+    @NotNull(message = "Age is required")
+    @Min(value = 18, message = "Age must be at least 18")
     @Column(name = "age")
     private Integer age;
-
+    @NotBlank(message = "Gender is required")
     @Column(name = "gender")
     private String gender;
 

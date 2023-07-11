@@ -1,7 +1,7 @@
 package com.perscholas.HospitalManagementSystem.Service;
 
 import com.perscholas.HospitalManagementSystem.Entity.Patient;
-import com.perscholas.HospitalManagementSystem.Repository.PatientRepository;
+import com.perscholas.HospitalManagementSystem.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -27,7 +27,7 @@ public class PatientServiceImpl implements  PatientService {
     public List<Patient> getAllPatients() {
         return patientRepository.findAll();
     }
-
+    // Getting patient using patientId
     public Patient getPatientById(Long patientId) {
         Optional<Patient> optional = Optional.ofNullable(patientRepository.findByPatientId(patientId));
         Patient patient=null;
@@ -39,7 +39,7 @@ public class PatientServiceImpl implements  PatientService {
         }
       return patient;
     }
-
+    // Update patient by PatientId
     @Override
     public Patient updatePatientById(Long patientId, Patient patient, MultipartFile file) {
         Patient existingPatient = patientRepository.findByPatientId(patientId);

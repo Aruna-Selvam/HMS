@@ -1,7 +1,7 @@
 package com.perscholas.HospitalManagementSystem.service;
 
 import com.perscholas.HospitalManagementSystem.Entity.ScheduleAppointment;
-import com.perscholas.HospitalManagementSystem.Repository.ScheduleAppointmentRepository;
+import com.perscholas.HospitalManagementSystem.repository.ScheduleAppointmentRepository;
 import com.perscholas.HospitalManagementSystem.Service.ScheduleAppointmentServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
