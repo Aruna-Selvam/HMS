@@ -32,7 +32,7 @@ The Hospital Management System is a web-based application designed to streamline
 ![](target/SchemaDiagram.png)
 
 ## Usage
-
+Create Database HMS before using the project.
 1. Open a web browser and go to `http://localhost:8082`
 2. Register an account or log in with existing credentials.
 3. Explore the various functionalities of the system, including department, doctor, patient, and appointment management.
