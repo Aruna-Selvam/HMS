@@ -23,7 +23,7 @@ The Hospital Management System is a web-based application designed to streamline
 
 1. Clone the repository: `git clone https://github.com/Aruna-Selvam/HMS.git`
 2. Navigate to the project directory: `cd hospital-management`
-3. Configure the MySQL database connection in `application.properties`.
+3. Configure the MySQL database connection in `application.properties`. Create database with the name HMS.
 4. Build the project: `mvn clean install`
 5. Run the application: `java -jar target/hospital-management-systme.jar`
 
@@ -32,7 +32,7 @@ The Hospital Management System is a web-based application designed to streamline
 ![](target/SchemaDiagram.png)
 
 ## Usage
-Create Database HMS before using the project.
+
 1. Open a web browser and go to `http://localhost:8082`
 2. Register an account or log in with existing credentials.
 3. Explore the various functionalities of the system, including department, doctor, patient, and appointment management.
